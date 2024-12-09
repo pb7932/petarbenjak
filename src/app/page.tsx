@@ -1,11 +1,7 @@
-import Image from "next/image";
 import Hero from "./sections/Hero";
-import Navbar from "./sections/Navbar";
 import Education from "./sections/Education";
-import { inter } from './layout'
 import Faq from "./sections/Faq";
 import Work from "./sections/Work";
-import Projects from "./sections/Projects";
 import SideQuest from "./sections/SideQuest";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { montserrat } from '../layout'
+import { Montserrat } from 'next/font/google'
 import Image from 'next/image'
 import linkedinLogo from '../assets/icons/linkedin-logo.svg'
 import mail from '../assets/icons/mail.svg'

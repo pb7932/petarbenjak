@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState, useRef } from 'react';
 
-const Counter = ({ end, label="k", delay = 0 }) => {
+const Counter = ({ end=0, label="k", delay = 0 }) => {
     const [count, setCount] = useState(0);
     const ref = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
