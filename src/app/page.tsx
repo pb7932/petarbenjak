@@ -6,7 +6,7 @@ import SideQuest from "./sections/SideQuest";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-32 pb-64 bg-black">
+    <main className="flex flex-col gap-32 pb-64 bg-black overflow-x-hidden">
         <section className="bg-black text-white px-4 max-md:py-36">
             <Hero></Hero>
         </section>
@@ -15,7 +15,7 @@ export default function Home() {
             {/* <div className="circle-right"></div> */}
             <Work></Work>
         </section>
-        <section id="education" className="bg-black text-white px-4 py-14">
+        <section id="education" className="bg-black text-white px-6 py-14">
             <Education></Education>
         </section>
         {/* <section id="projects" className="w-full bg-black text-white py-14">

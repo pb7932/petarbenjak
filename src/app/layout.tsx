@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-montserrat antialiased overflow-x-hidden`}
+        className={`font-montserrat antialiased overflow-x-hidden box-border`}
       >
         <Navbar></Navbar>
         {children}

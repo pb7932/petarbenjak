@@ -28,11 +28,11 @@
     /* From Uiverse.io by dylanharriscameron */ 
   .card-blob {
     position: relative;
-    width: 100%;
-    max-width: 380px;
+    width: 98%;
+    max-width: 372px;
     min-height: 250px;
     border-radius: 14px;
-    z-index: 11;
+    z-index: 30;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -44,10 +44,10 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    max-width: 370px;
-    width: 100%;
+    max-width: 362px;
+    width: calc(100% - 10px);
     min-height: 240px;
-    z-index: 2;
+    z-index: 20;
     background: #131312;
     backdrop-filter: blur(24px);
     border-radius: 10px;
@@ -57,7 +57,7 @@
   
   .blob {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     top: 50%;
     left: 50%;
     width: 60%;
