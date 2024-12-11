@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d out --nojekyll --cname https://pb7932.github.io/petarbenjak/",
+    "deploy" : "echo https://petarbenjak.com > ./out/CNAME && gh-pages -d out --nojekyll",
+    "homepage": "https://petarbenjak.com/",
     "lint": "next lint"
   },
   "dependencies": {

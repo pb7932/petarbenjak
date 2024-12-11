@@ -5,6 +5,7 @@ import Navbar from "./sections/Navbar";
 export const metadata: Metadata = {
   title: "Petar Benjak",
   description: "Life long learner",
+  robots: "index, follow"
 };
 
 export default function RootLayout({

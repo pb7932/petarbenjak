@@ -78,9 +78,9 @@ const Hero = () => {
                 </div>
             </div> */}
 
-            <div className='max-lg:scale-in-center-100-12 lg:scale-in-center-600 relative flex-1 flex flex-row justify-end items-center '>
-                <Image className='z-10 max-h-[640px] object-fill ml-24 xl:ml-0 mt-24 xl:mt-0' src={'/images/Petar Benjak cropped2.png'} alt={"Petar Benjak"} width={200} height={400} ></Image>
-                <div className='w-96 h-96 rounded-md border-2 border-purple absolute bottom-0 lg:left-[40%] bg-purple-op'>
+            <div className='max-lg:scale-in-center-100-12 lg:scale-in-center-600 relative flex-1 flex flex-row justify-end items-center max-md:self-end'>
+                <img className='z-10 max-h-[640px] object-fill md:ml-32 self-end xl:ml-0 mt-24 xl:mt-0' src={'Petar Benjak cropped2.png'} alt={"Petar Benjak"} width={200} height={400} ></img>
+                <div className='w-96 h-96 rounded-md border-2 border-purple absolute bottom-0 lg:left-[44%] bg-purple-op'>
                         <div className='dot'></div>
 
                     <div className='w-80 h-80 rounded-md border-2 border-purple absolute bottom-4 left-8 bg-black'>

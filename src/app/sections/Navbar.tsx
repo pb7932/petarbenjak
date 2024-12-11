@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
 
         <div className={`relative w-full lg:hidden flex flex-row`}>
-            <ul className={`absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center gap-6 h-[100vh] bg-black-op backdrop-blur-sm py-4 transition-all duration-200  ${isOpen ? 'block opacity-100 translate-x-0' : 'hidden opacity-0 translate-x-12'}`}>
+            <ul className={`absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center gap-6 h-[100vh] bg-black-op backdrop-blur-sm py-4 transition-all duration-200  ${isOpen ? 'z-0 nav-animate' : ' opacity-0 translate-x-full -z-50'}`}>
                 <li className='duration-200 transition-all ease-in-out hover:-translate-y-0.5'><a href="#work-experience" onClick={toggleMenu}>Work experience</a></li>
                 <li className='duration-200 transition-all ease-in-out hover:-translate-y-0.5'><a href="#education" onClick={toggleMenu}>Education</a></li>
                 {/* <li className='duration-200 transition-all ease-in-out hover:-translate-y-0.5'><a href="#projects" onClick={toggleMenu}>Projects</a></li> */}

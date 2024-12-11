@@ -590,6 +590,29 @@ box-shadow: inset -1px -2px 184px -24px rgba(68,44,99,1);
             right: calc(100%);
         }
     }
+
+
+    .nav-animate {
+        opacity: 0;
+        animation: nav-animate 0.3s ease-in-out both;
+    }
+
+    @keyframes nav-animate {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      
+        5% {
+          transform: translateX(48px);
+          opacity: 0;
+        }
+      
+        100% {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
 }
 
 body {

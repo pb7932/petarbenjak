@@ -17,7 +17,7 @@ const FaqCard = ({q,a}) => {
 
     return (
         <div className='w-full border-b-2 border-purple px-4 py-4'>
-            <div className='flex flex-row justify-start items-center gap-4' onClick={toggleClass}>
+            <div className='flex flex-row justify-start items-center gap-4 cursor-pointer' onClick={toggleClass}>
                 <Image className='w-6 h-6' src={question} alt={'Question mark'}></Image>
                 <p className='text-xl font-semibold' dangerouslySetInnerHTML={{ __html: q }}></p>
             </div>
