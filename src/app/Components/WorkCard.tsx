@@ -32,20 +32,6 @@ const WorkCard = ({heading, subheading, text, buttonLabel}) => {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-fuchsia-500/40 to-purple-600/40 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700"></div>
 
             <p className="relative z-10 font-medium tracking-wide">{buttonLabel}</p>
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              className="relative z-10 w-5 h-5 group-hover/btn:translate-x-[10%] transition-transform duration-300"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-              ></path>
-            </svg> */}
           </button>
 
           <div className="absolute bottom-4 left-4 w-8 h-8 rounded-full bg-gradient-to-br from-purple-400/20 to-transparent blur-sm group-hover/card:animate-pulse"></div>

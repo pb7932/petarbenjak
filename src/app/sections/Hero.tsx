@@ -7,6 +7,7 @@ import useInViewAnimation from '../hooks/useInViewAnimation'
 import dumbell from '../assets/icons/dumbbell.svg'
 import maths from '../assets/icons/maths.svg'
 import run from '../assets/icons/run.svg'
+import { useTranslations } from 'next-intl'
 
 const Hero = () => {
   const [h1Ref, h2Animation] = useInViewAnimation({ threshold: 0.1 }, 'slide-top');
@@ -21,23 +22,24 @@ const Hero = () => {
   const [c4Ref, c4Animation] = useInViewAnimation({ threshold: 0.1 }, 'scale-in-center');
   const [c5Ref, c5Animation] = useInViewAnimation({ threshold: 0.1 }, 'scale-in-center');
   
-
+  const t = useTranslations('hero')
+  
   return (
     <div className='w-full flex flex-col justify-center items-center max-container xl:min-h-[90vh]'>
         <div className='flex-2 w-full py-0 md:py-24 flex flex-col  lg:flex-row justify-between items-center'>
             <div>
-                <h1 ref={h1Ref} className={`slide-top-pre ${h2Animation} text-6xl font-inter lg:mt-24 leading-none ml-0 pl-0`}>Life Long Learner</h1>
+                <h1 ref={h1Ref} className={`slide-top-pre ${h2Animation} text-6xl font-inter lg:mt-24 leading-none ml-0 pl-0`}>{t('h')}</h1>
                 <div ref={p1Ref} className={`slide-in-left-pre ${p1Animation} max-w-2xl pt-24 text-2xl flex flex-row justify-start items-center gap-4`}>
                     <Image className='w-8 h-auto' src={maths} alt={'Mathematics icon'}></Image>
-                    <p>Nathional champion in mathematics</p>
+                    <p>{t('l1')}</p>
                 </div>
                 <div ref={p2Ref} className={`slide-in-left-pre ${p2Animation} max-w-2xl pt-4 text-2xl flex flex-row justify-start items-center gap-4`}>
                     <Image className='w-8 h-auto' src={dumbell} alt={'Dumbell icon'}></Image>
-                    <p>National powerlifting champion</p>
+                    <p>{t('l2')}</p>
                 </div>
                 <div ref={p3Ref} className={`slide-in-left-pre ${p3Animation} max-w-2xl pt-4 text-2xl flex flex-row justify-start items-center gap-4`}>
                     <Image className='w-8 h-auto' src={run} alt={'Running icon'}></Image>
-                    <p>Marathon runner</p>
+                    <p>{t('l3')}</p>
                 </div>
                 
             </div>
@@ -102,74 +104,74 @@ const Hero = () => {
         <div className='hidden lg:flex flex-col lg:flex-row justify-center items-center gap-16 mt-32 lg:mt-0'>
                 <div className='lg:scale-in-center-100 counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md'>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={3700} delay={1600}></Counter>
+                        <Counter end={3.7} delay={1800} label={t('label2')}></Counter>
                     </div>
-                    <p>Kilos lifted</p>
+                    <p>{t('data1')}</p>
                 </div>
 
                 <div className='lg:scale-in-center-200 counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md'>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={5} delay={1800}></Counter>
+                        <Counter end={5} delay={2000} label={t('label1')}></Counter>
                     </div>
-                    <p>Kilometers run</p>
+                    <p>{t('data2')}</p>
                 </div>
 
                 <div className='lg:scale-in-center-300 counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md'>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={10} delay={2000}></Counter>
+                        <Counter end={10} delay={2200} label={t('label1')}></Counter>
                     </div>
-                    <p>Smiles put on faces</p>
+                    <p>{t('data3')}</p>
                 </div>
 
                 <div className='lg:scale-in-center-400 counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md'>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={3} delay={2200}></Counter>
+                        <Counter end={3} delay={2400} label={t('label1')}></Counter>
                     </div>
-                    <p>Handshakes made</p>
+                    <p>{t('data4')}</p>
                 </div>
 
                 <div className='lg:scale-in-center-500 counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md'>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={60} label='' delay={2400}></Counter>
+                        <Counter end={60} label='' delay={2600}></Counter>
                     </div>
-                    <p>Books read</p>
+                    <p>{t('data5')}</p>
                 </div>
         </div>
 
         <div className='lg:hidden flex flex-col lg:flex-row justify-center items-center gap-24 mt-32 lg:mt-0'>
                 <div ref={c1Ref} className={`scale-in-center-pre ${c1Animation} counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md`}>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={3700}></Counter>
+                        <Counter end={3.7} label={t('label2')} decimalPlaces={2}></Counter>
                     </div>
-                    <p>Kilos lifted</p>
+                    <p>{t('data1')}</p>
                 </div>
 
                 <div ref={c2Ref} className={`scale-in-center-pre ${c2Animation} counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md`}>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={5}></Counter>
+                        <Counter end={5} label={t('label1')}></Counter>
                     </div>
-                    <p>Kilometers run</p>
+                    <p>{t('data2')}</p>
                 </div>
 
                 <div ref={c3Ref} className={`scale-in-center-pre ${c3Animation} counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md`}>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={10}></Counter>
+                        <Counter end={10} label={t('label1')}></Counter>
                     </div>
-                    <p>Smiles put on faces</p>
+                    <p>{t('data3')}</p>
                 </div>
 
                 <div ref={c4Ref} className={`scale-in-center-pre ${c4Animation} counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md`}>
                     <div className='font-semibold text-2xl'>
-                        <Counter end={3}></Counter>
+                        <Counter end={3} label={t('label1')}></Counter>
                     </div>
-                    <p>Handshakes made</p>
+                    <p>{t('data4')}</p>
                 </div>
 
                 <div ref={c5Ref} className={`scale-in-center-pre ${c5Animation} counter-card glow-sm px-6 py-3 text-lg flex flex-col justify-center items-start leading-normal rounded-md w-full max-w-md`}>
                     <div className='font-semibold text-2xl'>
                         <Counter end={60} label=''></Counter>
                     </div>
-                    <p>Books read</p>
+                    <p>{t('data5')}</p>
                 </div>
         </div>  
 

@@ -1,13 +1,13 @@
-import Hero from "./sections/Hero";
-import Education from "./sections/Education";
-import Faq from "./sections/Faq";
-import Work from "./sections/Work";
-import SideQuest from "./sections/SideQuest";
+import Hero from "../sections/Hero";
+import Education from "../sections/Education";
+import Faq from "../sections/Faq";
+import Work from "../sections/Work";
+import SideQuest from "../sections/SideQuest";
 
 export default function Home() {
   return (
     <main className="flex flex-col gap-32 pb-64 bg-black overflow-x-hidden">
-        <section className="bg-black text-white px-4 max-md:py-36">
+        <section id="home" className="bg-black text-white px-4 max-md:py-36">
             <Hero></Hero>
         </section>
         <section id="work-experience" className="relative bg-black text-white px-4 py-14">
