@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://petarbenjak.com/sitemap.xml
