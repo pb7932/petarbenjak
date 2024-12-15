@@ -3,10 +3,10 @@ import Image from 'next/image';
 import email from '../assets/icons/mail.svg';
 import linkedinLogo from '../assets/icons/linkedin-logo.svg';
 import resume from '../assets/icons/resume.svg';
-import { useTranslations } from 'next-intl';
 
-const Footer = () => {
-  const t = useTranslations('footer')
+const Footer = ({t}) => {
+//   const t = useTranslations('footer')
+  t = t['footer']
     
   return (
     <div id='contact' className='w-full min-h-[30vh] bg-black text-white px-4 pb-24'>
@@ -27,7 +27,7 @@ const Footer = () => {
             </a>
             <a href="documents/CV.pdf" download="CV.pdf">
                 <div className='w-full flex flex-row justify-center items-center gap-2 lg:gap-4 max-w-sm'>
-                    <h2>{t('cv')}</h2>
+                    <h2>{t['cv']}</h2>
                     <Image className='w-8 lg:w-10 h-auto' src={resume} alt="Resume icon" />
                 </div>
             </a>

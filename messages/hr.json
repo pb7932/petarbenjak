@@ -50,6 +50,9 @@
         "h3-fac": "Fakultet Elektrotehnike i Računarstva",
         "h3-date": "Ruj 2023 - Sada"
     },
+    "technologies": {
+        "h": "Tehnologije"
+    },
     "side-quests": {
         "h": "Sporedne misije",
         "h1": "Prikupljanje novčanih sredstava i web dizajn",
@@ -65,7 +68,7 @@
         "q1": "Koji je tvoj cilj?",
         "a1": "Razvitak u svim dimenzijama ljudskog karaktera. Pronaći i slijediti istinu.",
         "q2": "Što voliš raditi u slobodno vrijeme?",
-        "a2": "Sakupljanjem znanja čitajuči knjige i slušajući razborite ljude. Raditi na mentalnoj i fizičkoj snazi.",
+        "a2": "Sakupljati znanje čitajuči knjige i slušajući razborite ljude. Raditi na mentalnoj i fizičkoj snazi.",
         "q3": "Koji su tvoji najbolji rezultati u dizanju utega?",
         "a3": "Čučanj: 157.5 kg, benč: 100kg, mrtvo dizanje: 190 kg.",
         "q4": "Koja su tvoja najbolja trkačka vremena?",

@@ -6,7 +6,7 @@ const Counter = ({ end=0, label, delay = 0, decimalPlaces=0 }) => {
     const ref = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const [hasStarted, setHasStarted] = useState(false);  // To track if the animation has started after delay
-    const increment = end / 50;
+    const increment = end / 25;
 
     // Setup the intersection observer
     useEffect(() => {
@@ -39,7 +39,13 @@ const Counter = ({ end=0, label, delay = 0, decimalPlaces=0 }) => {
                     setCount(prevCount => {
                         let nextCount;
                         if (decimalPlaces == 0) {
-                            nextCount = Math.ceil(prevCount + increment);
+                            if (end < 10) {
+                                decimalPlaces = 1
+                                const num = prevCount + increment
+                                nextCount = Number(num.toFixed(decimalPlaces));
+                            } else {
+                                nextCount = Math.ceil(prevCount + increment);
+                            }
                         } else {
                             const num = prevCount + increment
                             nextCount = Number(num.toFixed(decimalPlaces));

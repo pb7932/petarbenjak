@@ -24,6 +24,84 @@
     scroll-behavior: smooth;
 }
 
+select {
+    background-color: transparent;
+}
+
+.spinnerContainer {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logoContainer {
+    display: flex;
+    /* white-space: nowrap; */
+    animation: scroll 10s linear infinite;  
+    /* width: auto; */
+}
+/* 
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);  
+    }
+} */
+
+.spinner {
+    margin: 0 10%;
+  
+    padding-top: 40px;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+    overflow: hidden;
+  }
+
+  .spinner-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 4rem;
+    width: max-content;
+    list-style-type: none;
+
+    animation: scroll var(--_animation-duration, 12s) var(--_animation-direction, forwards) linear infinite;
+
+  }
+
+  .spinner-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+
+    border-radius: 12px;
+    padding: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .spinner-item img {
+    width: 64px;
+    height: auto;
+  }
+  
+  .spinner[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .spinner[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-50% - 2rem));
+    }
+  }
+
+
 @layer components {
     /* From Uiverse.io by dylanharriscameron */ 
   .card-blob {
@@ -380,43 +458,43 @@ box-shadow: inset -1px -2px 184px -24px rgba(68,44,99,1);
     .scale-in-center-100 {
         -webkit-animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation-delay: 2800ms;
+                animation-delay: 2400ms;
     }
 
     .scale-in-center-100-12 {
         -webkit-animation: scale-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation-delay: 2800ms;
+                animation-delay: 2400ms;
     }
 
     .scale-in-center-200 {
         -webkit-animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation-delay: 3000ms;
+                animation-delay: 2600ms;
     }
 
     .scale-in-center-300 {
         -webkit-animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation-delay: 3200ms;
+                animation-delay: 2800ms;
     }
 
     .scale-in-center-400 {
         -webkit-animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation-delay: 3400ms;
+                animation-delay: 3000ms;
     }
 
     .scale-in-center-500 {
         -webkit-animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation-delay: 3600ms;
+                animation-delay: 3200ms;
     }
 
     .scale-in-center-600 {
         -webkit-animation: scale-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation-delay: 4000ms;
+                animation-delay: 3600ms;
     }
 
   
